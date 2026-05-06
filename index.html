@@ -1,0 +1,179 @@
+<!DOCTYPE html>                                                                                                                                                                                                            
+  <html lang="ar" dir="rtl">                                                                                                                                                                                                     
+  <head>                                                                                                                                                                                                                         
+    <meta charset="UTF-8" />                                                                                                                                                                                                     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />                                                                                                                                                     
+    <title>احلامي AI — تفسير الأحلام بالذكاء الاصطناعي</title>               
+    <meta name="description" content="تطبيق احلامي AI لتفسير الأحلام بالذكاء الاصطناعي — متاح على App Store." />                                                                                                                 
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E" />                                          
+    <style>                                                                                                                                                                                                                      
+      :root {                                                                                                                                                                                                                    
+        --bg: #0a0612;                                                                                                                                                                                                           
+        --bg-soft: #15102a;                                                                                                                                                                                                      
+        --text: #f4ecff;                                                     
+        --text-dim: #a698c8;                                                                                                                                                                                                     
+        --accent: #b89aff;                                                                                          
+        --accent-glow: rgba(184, 154, 255, 0.35);                                                                                                                                                                                
+        --border: rgba(184, 154, 255, 0.18);                                                                        
+      }                                                                                                                                                                                                                          
+                                                                                                                    
+      * { box-sizing: border-box; margin: 0; padding: 0; }                                                                                                                                                                       
+                                                                                                                    
+      html, body {                                                                                                                                                                                                               
+        background: var(--bg);        
+        color: var(--text);                                                                                                                                                                                                      
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI",                                       
+                     "Tahoma", system-ui, sans-serif;                                                                                                                                                                            
+        min-height: 100vh;            
+        overflow-x: hidden;                                                                                                                                                                                                      
+        -webkit-font-smoothing: antialiased;                                                                                                                                                                                     
+      }                                                                      
+                                                                                                                                                                                                                                 
+      body {                                                                                                        
+        background:                                                          
+          radial-gradient(ellipse 80% 50% at 50% -10%, rgba(123, 90, 220, 0.25), transparent 70%),
+          radial-gradient(ellipse 60% 40% at 80% 100%, rgba(184, 154, 255, 0.12), transparent 70%),                                                                                                                              
+          var(--bg);                                                                                                                                                                                                             
+        display: flex;                                                                                                                                                                                                           
+        flex-direction: column;                                                                                                                                                                                                  
+        align-items: center;                                                                                        
+        justify-content: center;                                             
+        padding: 2rem 1.5rem;         
+      }                                                                                                                                                                                                                          
+  
+      main {                                                                                                                                                                                                                     
+        max-width: 640px;                                                                                           
+        width: 100%;                                                                                                                                                                                                             
+        text-align: center;           
+        padding: 3rem 0;                                                                                                                                                                                                         
+      }                                                                                                             
+                                                                             
+      .logo {                         
+        font-size: 4rem;
+        margin-bottom: 1.5rem;                                                                                                                                                                                                   
+        filter: drop-shadow(0 0 24px var(--accent-glow));
+        animation: float 6s ease-in-out infinite;                                                                                                                                                                                
+      }                                                                                                             
+                                                                                                                                                                                                                                 
+      @keyframes float {                                                                                            
+        0%, 100% { transform: translateY(0); }                               
+        50% { transform: translateY(-8px); }                                                                                                                                                                                     
+      }
+                                                                                                                                                                                                                                 
+      h1 {                                                                                                          
+        font-size: clamp(2rem, 6vw, 3rem);                                   
+        font-weight: 700;                                                                                                                                                                                                        
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;                                                                                                                                                                                                   
+        background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);                                           
+        -webkit-background-clip: text;                                                                                                                                                                                           
+        background-clip: text;        
+        -webkit-text-fill-color: transparent;                                                                                                                                                                                    
+      }                                                                                                                                                                                                                          
+                                                                             
+      .subtitle {                                                                                                                                                                                                                
+        font-size: 1rem;                                                                                            
+        color: var(--text-dim);                                              
+        margin-bottom: 0.5rem;        
+        letter-spacing: 0.05em;                                                                                                                                                                                                  
+      }
+                                                                                                                                                                                                                                 
+      .tagline {                                                                                                                                                                                                                 
+        font-size: clamp(1rem, 3vw, 1.2rem);                                 
+        color: var(--text-dim);                                                                                                                                                                                                  
+        line-height: 1.7;                                                                                           
+        margin: 2rem auto;                                                                                                                                                                                                       
+        max-width: 480px;             
+      }                                                                                                                                                                                                                          
+                                                                                                                    
+      .cta {                                                                                                                                                                                                                     
+        display: inline-flex;         
+        align-items: center;                                                                                                                                                                                                     
+        gap: 0.5rem;                                                                                                
+        background: linear-gradient(135deg, #7b5adc, var(--accent));         
+        color: #fff;                                                                                                                                                                                                             
+        text-decoration: none;
+        padding: 0.9rem 2rem;                                                                                                                                                                                                    
+        border-radius: 999px;                                                                                       
+        font-weight: 600;                                                                                                                                                                                                        
+        font-size: 1rem;                                                                                            
+        margin: 1rem 0.5rem;                                                 
+        box-shadow: 0 8px 24px var(--accent-glow);                                                                                                                                                                               
+        transition: transform 0.2s ease, box-shadow 0.2s ease;                                                                                                                                                                   
+      }                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                 
+      .cta:hover {                                                                                                  
+        transform: translateY(-2px);                                         
+        box-shadow: 0 12px 32px var(--accent-glow);
+      }                                                                                                                                                                                                                          
+  
+      .cta:active { transform: translateY(0); }                                                                                                                                                                                  
+                                                                                                                    
+      .links {                                                               
+        margin-top: 2.5rem;           
+        display: flex;                                                                                                                                                                                                           
+        flex-wrap: wrap;
+        gap: 1rem 2rem;                                                                                                                                                                                                          
+        justify-content: center;                                                                                    
+        font-size: 0.95rem;                                                                                                                                                                                                      
+      }                               
+                                                                                                                                                                                                                                 
+      .links a {                                                                                                    
+        color: var(--text-dim);                                              
+        text-decoration: none;        
+        border-bottom: 1px solid transparent;                                                                                                                                                                                    
+        transition: color 0.2s, border-color 0.2s;
+      }                                                                                                                                                                                                                          
+                                                                                                                    
+      .links a:hover {                                                                                                                                                                                                           
+        color: var(--accent);         
+        border-bottom-color: var(--accent);                                                                                                                                                                                      
+      }                                                                                                             
+                                                                             
+      footer {                        
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);                                                                                                                                                                                     
+        color: var(--text-dim);
+        font-size: 0.85rem;                                                                                                                                                                                                      
+        width: 100%;                                                                                                
+        max-width: 640px;                                                                                                                                                                                                        
+        text-align: center;           
+      }                                                                                                                                                                                                                          
+                                                                                                                    
+      footer a {                                                             
+        color: var(--accent);         
+        text-decoration: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {                                                                                                                                                                                  
+        .logo { animation: none; }
+      }                                                                                                                                                                                                                          
+    </style>                                                                                                        
+  </head>                                                                                                                                                                                                                        
+  <body>                              
+    <main>                                                                                                                                                                                                                       
+      <div class="logo" aria-hidden="true">🌙</div>                                                                 
+      <p class="subtitle">IRQ Apps</p>                                       
+      <h1>احلامي AI</h1>                                                                                                                                                                                                         
+      <p class="tagline">
+        تفسير الأحلام بالذكاء الاصطناعي — وفق المنهج الإسلامي،                                                                                                                                                                   
+        <br />متاح بسبع لغات على نظام iOS.                                                                                                                                                                                       
+      </p>                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                 
+      <a class="cta" href="https://apps.apple.com/app/id0000000000" target="_blank" rel="noopener">                                                                                                                              
+        تحميل من App Store                                                                                                                                                                                                       
+      </a>                                                                                                                                                                                                                       
+                                                                                                                    
+      <nav class="links" aria-label="Footer">                                                                                                                                                                                    
+        <a href="./privacy.html">سياسة الخصوصية</a>
+        <a href="./terms.html">شروط الاستخدام</a>                                                                                                                                                                                
+        <a href="mailto:m261m@yahoo.com">تواصل معنا</a>                                                                                                                                                                          
+      </nav>                                                                                                                                                                                                                     
+    </main>                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                 
+    <footer>                                                                                                        
+      <p>© 2026 IRQ Apps. جميع الحقوق محفوظة.</p>                            
+    </footer>                                                                                                                                                                                                                    
+  </body>
+  </html>    
